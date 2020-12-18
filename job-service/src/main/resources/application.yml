@@ -28,6 +28,13 @@ task:
     #活跃时间
     keepAliveSeconds: 300
 
+dynamic:
+  request:
+    debug: true
+
+swagger:
+  enable: true
+
 box:
   system:
     url: ${SYSTEM_OUTER_HOST:https://wxapitest.zyxsong.com}
