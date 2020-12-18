@@ -1,0 +1,20 @@
+                                                                                                                          
+                                                                                                                          
+LLLLLLLLLLL             XXXXXXX       XXXXXXX                           JJJJJJJJJJJ     OOOOOOOOO     BBBBBBBBBBBBBBBBB   
+L:::::::::L             X:::::X       X:::::X                           J:::::::::J   OO:::::::::OO   B::::::::::::::::B  
+L:::::::::L             X:::::X       X:::::X                           J:::::::::J OO:::::::::::::OO B::::::BBBBBB:::::B 
+LL:::::::LL             X::::::X     X::::::X                           JJ:::::::JJO:::::::OOO:::::::OBB:::::B     B:::::B
+  L:::::L               XXX:::::X   X:::::XXX                             J:::::J  O::::::O   O::::::O  B::::B     B:::::B
+  L:::::L                  X:::::X X:::::X                                J:::::J  O:::::O     O:::::O  B::::B     B:::::B
+  L:::::L                   X:::::X:::::X                                 J:::::J  O:::::O     O:::::O  B::::BBBBBB:::::B 
+  L:::::L                    X:::::::::X      ---------------             J:::::j  O:::::O     O:::::O  B:::::::::::::BB  
+  L:::::L                    X:::::::::X      -:::::::::::::-             J:::::J  O:::::O     O:::::O  B::::BBBBBB:::::B 
+  L:::::L                   X:::::X:::::X     --------------- JJJJJJJ     J:::::J  O:::::O     O:::::O  B::::B     B:::::B
+  L:::::L                  X:::::X X:::::X                    J:::::J     J:::::J  O:::::O     O:::::O  B::::B     B:::::B
+  L:::::L         LLLLLLXXX:::::X   X:::::XXX                 J::::::J   J::::::J  O::::::O   O::::::O  B::::B     B:::::B
+LL:::::::LLLLLLLLL:::::LX::::::X     X::::::X                 J:::::::JJJ:::::::J  O:::::::OOO:::::::OBB:::::BBBBBB::::::B
+L::::::::::::::::::::::LX:::::X       X:::::X                  JJ:::::::::::::JJ    OO:::::::::::::OO B:::::::::::::::::B 
+L::::::::::::::::::::::LX:::::X       X:::::X                    JJ:::::::::JJ        OO:::::::::OO   B::::::::::::::::B  
+LLLLLLLLLLLLLLLLLLLLLLLLXXXXXXX       XXXXXXX                      JJJJJJJJJ            OOOOOOOOO     BBBBBBBBBBBBBBBBB   
+                                                                                                                          
+                                                                                                                          

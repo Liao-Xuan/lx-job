@@ -1,0 +1,46 @@
+server:
+  port: 83
+
+spring:
+  redis:
+    database: 2
+    host: ${REDIS_HOST:testr.zyxsong.com}
+    port: 6379
+    password: ${REDIS_PASSWORD:mQs1Oq1Xd}
+    jedis:
+      pool:
+        ## 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        ## 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        ## 连接池中的最大空闲连接
+        max-idle: 8
+        ## 连接池中的最小空闲连接
+        min-idle: 0
+    ## 连接超时时间（毫秒）
+    timeout: 3000
+
+# 线程池配置
+task:
+  pool:
+    #队列容量
+    queueCapacity: 20
+    #活跃时间
+    keepAliveSeconds: 300
+
+box:
+  system:
+    url: ${SYSTEM_OUTER_HOST:https://wxapitest.zyxsong.com}
+
+# 微信订阅消息接口
+wechat:
+  access-token:
+    api: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&
+  subscribeMsg-send:
+    api: https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=
+  appId: ${WECHAT_APPID:wxb8a7dee329678318}
+  secret: ${WECHAT_SECRET:07de45eb432fdb8a12dd186cb85e13a2}
+  # 跳转小程序类型：developer为开发版；trial为体验版；formal为正式版；默认为正式版
+  message:
+    miniprogram_state: ${WX_MESSAGE_STATE:trial}
+

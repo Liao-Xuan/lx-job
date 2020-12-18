@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="1 seconds">
+    <!--读取application.yml中配置的项目id-->
+    <springProperty scope="context" name="application.name" source="spring.application.name"/>
+    <property name="info.log.path" value="/usr/local/docker/java/logs/${application.name}/info"/>
+    <property name="error.log.path" value="/usr/local/docker/java/logs/${application.name}/error"/>
+    <!--控制台输出统一定义，各环境下共享-->
+    <appender name="CONSOLE_APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--设置日志输出格式-->
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</Pattern>
+            <!-- 设置字符集 -->
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--2、 输出level为 INFO 日志，时间滚动输出  -->
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文档的路径及文档名 -->
+        <file>${info.log.path}.log</file>
+        <!--日志文档输出格式-->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${info.log.path}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--日志文档保留天数-->
+            <maxHistory>15</maxHistory>
+        </rollingPolicy>
+        <!-- 过滤得到info级别的 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+    <!-- 5、输出level为 ERROR 日志，时间滚动输出  -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文档的路径及文档名 -->
+        <file>${error.log.path}.log</file>
+        <!--日志文档输出格式-->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${error.log.path}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--日志文档保留天数-->
+            <maxHistory>15</maxHistory>
+        </rollingPolicy>
+        <!-- 过滤得到ERROR级别的 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <logger name="cn.web" level="DEBUG"/>
+    <logger name="c.w.m.w.m.s" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_APPENDER"/>
+        <appender-ref ref="INFO_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+
+</configuration>
