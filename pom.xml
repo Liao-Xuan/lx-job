@@ -22,6 +22,9 @@
         <hutool.version>5.4.1</hutool.version>
         <guava.version>29.0-jre</guava.version>
         <jackson.version>2.11.0</jackson.version>
+        <redission.version>3.12.3</redission.version>
+        <fastjson.version>1.2.66</fastjson.version>
+        <retry.version>1.2.4.RELEASE</retry.version>
     </properties>
 
     <dependencyManagement>
@@ -40,7 +43,7 @@
                 <version>${hutool.version}</version>
             </dependency>
 
-            <!-- guava工具类 -->
+            <!--工具类 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -58,17 +61,24 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>4.4</version>
             </dependency>
+            <!--工具类 -->
 
             <dependency>
                 <groupId>org.springframework.retry</groupId>
                 <artifactId>spring-retry</artifactId>
-                <version>1.2.4.RELEASE</version>
+                <version>${retry.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redission.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.66</version>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!--swagger-->
@@ -97,12 +107,7 @@
             </dependency>
             <!--swagger-->
 
-            <dependency>
-                <groupId>com.spring4all</groupId>
-                <artifactId>swagger-spring-boot-starter</artifactId>
-                <version>1.9.1.RELEASE</version>
-            </dependency>
-
+            <!--fasterxml-->
             <dependency>
                 <groupId>com.fasterxml.jackson.dataformat</groupId>
                 <artifactId>jackson-dataformat-xml</artifactId>
@@ -126,6 +131,7 @@
                 <artifactId>jackson-core</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+            <!--fasterxml-->
 
             <dependency>
                 <groupId>org.aspectj</groupId>
