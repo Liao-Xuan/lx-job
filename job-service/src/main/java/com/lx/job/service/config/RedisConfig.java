@@ -32,9 +32,9 @@ import java.util.Map;
  * @Version: 1.0
  */
 
-@Configuration
-@EnableCaching
-@CacheConfig
+//@Configuration
+//@EnableCaching
+//@CacheConfig
 public class RedisConfig extends CachingConfigurerSupport {
 
     @Bean

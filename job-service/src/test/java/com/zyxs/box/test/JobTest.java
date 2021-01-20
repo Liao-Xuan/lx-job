@@ -19,8 +19,8 @@ import javax.annotation.Resource;
  * @Version: 1.0
  */
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = JobApplication.class)
+/*@RunWith(SpringRunner.class)
+@SpringBootTest(classes = JobApplication.class)*/
 public class JobTest {
 
     @Resource
@@ -29,7 +29,7 @@ public class JobTest {
     @Resource
     private RedisUtilTemplate redisUtilTemplate;
 
-    @Test
+//    @Test
     public void testRabbitMq() {
         MessageTemplate<String> template = new MessageTemplate<>();
         template.setMessage("hello lx job");

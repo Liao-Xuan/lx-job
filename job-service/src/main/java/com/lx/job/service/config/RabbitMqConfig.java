@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Slf4j
-@Configuration
+//@Configuration
 public class RabbitMqConfig {
 
     @Bean
