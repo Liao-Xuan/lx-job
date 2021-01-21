@@ -1,11 +1,19 @@
-FROM maven:3.5.4-alpine
+# First stage: complete build environment
+FROM maven:3.5.0-jdk-8-alpine AS builder
 
-ADD . /app
+# add pom.xml and source code
+ADD ./pom.xml pom.xml
+ADD ./src src/
 
-WORKDIR /app/
-
+# package jar
 RUN mvn clean package
+
+# Second stage: minimal runtime environment
+From openjdk:8-jre-alpine
+
+# copy jar from the first stage
+COPY --from=builder target/job-service-1.0.0.jar job-service-1.0.0.jar
 
 EXPOSE 8080
 
-ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar target/job-service-1.0.0.jar
+CMD ["java", "-jar", "job-service-1.0.0.jar"]
