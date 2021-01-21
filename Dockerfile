@@ -12,7 +12,7 @@ RUN mvn clean package
 From openjdk:8-jre-alpine
 
 # copy jar from the first stage
-COPY --from=builder target/job-service-1.0.0.jar job-service-1.0.0.jar
+COPY --from=builder job-service/target/job-service-1.0.0.jar job-service-1.0.0.jar
 
 EXPOSE 8080
 
