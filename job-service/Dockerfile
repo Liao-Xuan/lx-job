@@ -8,6 +8,4 @@ RUN mvn clean package
 
 EXPOSE 8080
 
-ADD target/job-service*.jar app.jar
-
-CMD ["java","-jar","/opt/app.jar"]
+ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar target/job-service-1.0.0.jar
