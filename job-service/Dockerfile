@@ -1,14 +1,12 @@
-FROM registry.cn-chengdu.aliyuncs.com/zbox/jre:1.8
+FROM maven:3.5.4-alpine
 
-WORKDIR /opt/
+ADD . /app
 
-RUN echo "Asia/Shanghai" > /etc/timezone
+WORKDIR /app/
 
-RUN mkdir /data
+RUN mvn clean package
 
-USER root
-
-EXPOSE 8081
+EXPOSE 8080
 
 ADD target/job-service*.jar app.jar
 
