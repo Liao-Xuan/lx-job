@@ -2,7 +2,7 @@
 FROM maven:3.5.0-jdk-8-alpine AS builder
 
 # add pom.xml and source code
-ADD ./pom.xml pom.xml
+ADD ./job-service/pom.xml pom.xml
 
 # package jar
 RUN mvn clean package
