@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-8-alpine AS MAVEN_BUILD
+FROM java:8-alpine
 
 ADD job-service-*.jar job-service.jar
 
