@@ -138,11 +138,10 @@
                 <artifactId>aspectjweaver</artifactId>
                 <version>1.9.1</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -158,10 +157,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration>
-                    <!--默认关掉单元测试 -->
+                    &lt;!&ndash;默认关掉单元测试 &ndash;&gt;
                     <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
