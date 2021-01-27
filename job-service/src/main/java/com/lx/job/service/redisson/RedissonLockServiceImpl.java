@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @Date: 2020/3/20 22:18
  * @Version: 1.0
  */
-@Service
+//@Service
 public class RedissonLockServiceImpl implements RedissonLockService {
 
     @Resource

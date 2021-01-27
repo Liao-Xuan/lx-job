@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date: 2020/6/19 16:43
  * @Version: 1.0
  */
-@Configuration
+//@Configuration
 public class RedissonConfig {
 
     @Value("${spring.redis.host}")
@@ -27,7 +27,7 @@ public class RedissonConfig {
     @Value("${spring.redis.password}")
     private String password;
 
-    @Bean
+//    @Bean
     public RedissonClient getRedisson() throws Exception {
         RedissonClient redisson = null;
         Config config = new Config();
