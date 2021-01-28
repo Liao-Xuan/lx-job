@@ -1,9 +1,0 @@
-FROM java:8-alpine
-
-ADD /target/job-service-*.jar job-service.jar
-
-EXPOSE 8001
-
-RUN echo 'Asia/Shanghai' > /etc/timezone
-
-ENTRYPOINT ["java","-jar","/job-service.jar"]
