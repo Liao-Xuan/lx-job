@@ -133,7 +133,7 @@
             </plugin>
 
             <!-- Docker maven plugin -->
-            <plugin>
+            <!--<plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.0.0</version>
@@ -147,15 +147,15 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- 镜像名称-->
+                    &lt;!&ndash; 镜像名称&ndash;&gt;
                     <imageName>${project.artifactId}</imageName>
-                    <!-- 镜像标签-->
+                    &lt;!&ndash; 镜像标签&ndash;&gt;
                     <imageTags>
                         <imageTag>${project.version}</imageTag>
                     </imageTags>
                     <baseImage>java</baseImage>
                     <entryPoint>["java", "-jar", "/job-service.jar"]</entryPoint>
-                    <!-- dockerfile文件路径-->
+                    &lt;!&ndash; dockerfile文件路径&ndash;&gt;
                     <dockerDirectory>/</dockerDirectory>
                     <resources>
                         <resource>
@@ -165,7 +165,7 @@
                         </resource>
                     </resources>
                 </configuration>
-            </plugin>
+            </plugin>-->
             <!-- Docker maven plugin -->
         </plugins>
     </build>
