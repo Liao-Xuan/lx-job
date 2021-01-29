@@ -25,4 +25,9 @@ public class DemoController {
     public Result<String> demo(@RequestParam("id") Integer id, HttpServletRequest req) {
         return Result.success("box demo : " + id);
     }
+
+    @GetMapping("ping")
+    public Result<String> ping() {
+        return Result.success("ping");
+    }
 }
