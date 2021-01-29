@@ -1,1 +1,1 @@
-FROM job-service
+FROM java:8-alpine
